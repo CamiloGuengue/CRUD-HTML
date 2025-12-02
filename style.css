@@ -1,0 +1,183 @@
+/* ===========================
+   ESTILOS GENERALES
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a5a);
+    color: #f0f0f0;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Contenedores principales */
+header, nav, main, footer {
+    margin-bottom: 25px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   NAV
+=========================== */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: #ffffff33;
+}
+
+/* ===========================
+   SECCIONES
+=========================== */
+section {
+    padding: 25px;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    border-left: 5px solid #6e8efb;
+    padding-left: 10px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* ===========================
+   FORMULARIO
+=========================== */
+form label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 18px;
+    border: none;
+    background: #6e8efb;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #857ffb;
+}
+
+/* ===========================
+   TABLAS
+=========================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th {
+    background: #6e8efb;
+    color: #fff;
+    padding: 10px;
+}
+
+table td {
+    padding: 10px;
+    background: #ffffff10;
+}
+
+table tr:nth-child(even) td {
+    background: #ffffff20;
+}
+
+.action, button {
+    margin-right: 8px;
+}
+
+/* ===========================
+   ASIDE
+=========================== */
+aside {
+    margin-top: 15px;
+    padding: 12px;
+    border-left: 4px solid #6e8efb;
+    background: #6e8efb;
+    border-radius: 8px;
+}
+
+/* ===========================
+   MULTIMEDIA
+=========================== */
+iframe, audio, video {
+    display: block;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
+
+footer a {
+    color: #6e8efb;
+}

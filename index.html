@@ -1,12 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>CRUDscope-HTML</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>CRUDSCOPE HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Estilos mínimos para que se vea ordenado */
+    body { font-family: Arial, sans-serif; margin: 18px; line-height: 1.45; }
+    header, nav, main, footer { margin-bottom: 18px; }
+    nav ul { list-style: none; padding: 0; display: flex; gap: 12px; }
+    nav a { text-decoration: none; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid #aaa; padding: 8px; text-align: left; }
+    aside { background:#f9f9f9; padding: 10px; margin-top: 12px; border-left: 4px solid #ccc; }
+    .small { font-size: 0.9rem; color: #555; }
+    button, a.action { margin-right: 8px; }
+  </style>
 </head>
+
 <body>
-    <h1>CRUDscope-HTML</h1>
-    <p>Panel táctico para aprender CRUD en HTML CRUD</p>
+
+  <!-- HEADER: título principal y descripción corta -->
+  <header>
+    <h1>CRUDSCOPE HTML</h1>
+    <p class="small">CRUD HTML <abbr title="Crear, Leer, Actualizar y Eliminar"></abbr>.</p>
+  </header>
+
+  <!-- NAV: enlaces internos a secciones de la misma página -->
+  <nav>
+    <ul>
+      <li><a href="#crear">Crear</a></li>
+      <li><a href="#listado">Listado</a></li>
+      <li><a href="#multimedia">Multimedia</a></li>
+      <li><a href="#acerca">Acerca</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN: contenido principal -->
+  <main>
+
+    <!-- SECCIÓN: Crear tarea (formulario solo maqueta) -->
+    <section id="crear" aria-labelledby="crear-h2">
+      <h2 id="crear-h2">Crear tarea</h2>
+      <p>Usa este formulario para simular el registro de una tarea. Los campos son de ejemplo y no envían datos.</p>
+
+      <form action="#" method="post" novalidate>
+        <label>
+          Nombre de la tarea:
+          <input type="text" name="titulo" placeholder="Ej. Preparar informe" required>
+        </label>
+        <br><br>
+
+        <label>
+          Prioridad (1-5):
+          <input type="number" name="prioridad" min="1" max="5" value="3">
+        </label>
+        <br><br>
+
+        <label>
+          Fecha límite:
+          <input type="date" name="fecha_limite">
+        </label>
+        <br><br>
+
+        <label>
+          Descripción:
+          <textarea name="descripcion" rows="4" cols="40" placeholder="Detalles de la tarea..."></textarea>
+        </label>
+        <br><br>
+
+        <button type="submit">Crear tarea</button>
+      </form>
+    </section>
+
+    <!-- SECCIÓN: Listado de tareas -->
+    <section id="listado" aria-labelledby="listado-h2">
+      <h2 id="listado-h2">Listado de tareas</h2>
+
+      <p>A continuación hay una tabla con tareas de ejemplo. Observa los botones para "Actualizar" y "Eliminar".</p>
+
+      <table>
+        <caption>Tabla de tareas de ejemplo</caption>
+        <thead>
+          <tr>
+            <th>Tarea</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Estudiar HTML</td>
+            <td><time datetime="2025-02-01">1 feb 2025</time></td>
+            <td>En progreso</td>
+            <td>
+              <button type="button">Actualizar</button>
+              <a href="#"
+                class="action"
+                role="button"
+                aria-label="Eliminar Estudiar HTML">Eliminar</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Preparar presentación</td>
+            <td><time datetime="2025-02-05">5 feb 2025</time></td>
+            <td>Pendiente</td>
+            <td>
+              <button type="button">Actualizar</button>
+              <a href="#" class="action" role="button" aria-label="Eliminar Preparar presentación">Eliminar</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Revisar reportes</td>
+            <td><time datetime="2025-02-10">10 feb 2025</time></td>
+            <td>Completada</td>
+            <td>
+              <button type="button">Actualizar</button>
+              <a href="#" class="action" role="button" aria-label="Eliminar Revisar reportes">Eliminar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- ARTICLE: ejemplo de artículo que representa una tarea más detallada -->
+      <article aria-labelledby="destacado-h3" style="margin-top:12px;">
+        <h3 id="destacado-h3">Tarea destacada</h3>
+        <p>Esta es una <strong>tarea importante</strong> que requiere atención. <em>Verificar recursos</em> y comunicar avances.</p>
+        <p>Resumen: <span>Revisión mensual de métricas</span>. <mark>Prioridad alta</mark>.</p>
+      </article>
+
+      <!-- ASIDE: información adicional -->
+      <aside>
+        <h4>Consejos rápidos</h4>
+        <ul>
+          <li>Marca la prioridad en cada tarea.</li>
+          <li>Actualiza las tareas completadas para llevar un registro.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- SECCIÓN: Multimedia -->
+    <section id="multimedia" aria-labelledby="multimedia-h2">
+      <h2 id="multimedia-h2">Multimedia del sistema</h2>
+      <p>CONTENIDO AUDIO Y VIDEO.</p>
+
+      <figure>
+        <img src="images.png" alt="Miniatura de ejemplo" width="320" height="160">
+        <figcaption>IMAGEN EJEMPLO</figcaption>
+      </figure>
+
+      <h3>Audio</h3>
+      <audio controls>
+        <source src="De La Ghetto Ft Ñengo Flow   Deuces Spanish Version Con Letra.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+      </audio>
+
+      <h3>Video</h3>
+      <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/ScMzIvxBSi4"
+    allowfullscreen>
+</iframe>
+
+    </section>
+
+    <!-- SECCIÓN: Acerca de / más texto descriptivo -->
+    <section id="acerca" aria-labelledby="acerca-h2">
+      <h2 id="acerca-h2">Acerca de este proyecto</h2>
+      <p>Proyecto para practicar estructura HTML y elementos Multimedia</p>
+      <p>Incluye ejemplos de: <strong>formularios</strong>, <em>tablas</em>, <u>enlaces</u> y multimedia.</p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: datos del autor y contacto -->
+  <footer>
+    <p>HTML entrenamiento 2025-11</p>
+    <address>
+      Autor: Guengue<br>
+      Contacto: <a href="mailto:Guenguec@gmail.com">Guenguec@gmail.com</a>
+    </address>
+  </footer>
+
 </body>
 
 </html>
